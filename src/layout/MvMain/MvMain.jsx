@@ -1,9 +1,18 @@
 import React from 'react'
 
-const MvMain = () => {
+/**
+ * MvMain
+ * 
+ * Purpose:
+ * - Envolve pages with a mian.
+ * 
+ * @param children Render a Function Component. 
+ * @returns 
+ */
+export const MvMain = ({children}) => {
   return (
-    <div>MvMain</div>
+    <main data-testid="main-page">
+      {children}
+    </main>
   )
 }
-
-export default MvMain

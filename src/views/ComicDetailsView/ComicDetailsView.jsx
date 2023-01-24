@@ -1,8 +1,7 @@
-import React from 'react'
-
+import { MvMain } from "@layout/MvMain/MvMain"
 const ComicDetailsView = () => {
   return (
-    <div>ComicDetailsView</div>
+    <MvMain>ComicDetailsView</MvMain>
   )
 }
 

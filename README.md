@@ -70,6 +70,7 @@ yarn run test
 | [src/layout/MvHeader/MvHeader.jsx](src/layout/MvHeader/MvHeader.jsx)     | Navbar.            |
 | [src/layout/MvMain/MvMain.jsx](src/layout/MvMain/MvMain.jsx)             | Main component.    |
 | [src/layout/MvSection/MvSection.jsx](src/layout/MvSection/MvSection.jsx) | Section component. |
+| [src/layout/MvLink/MvLink.jsx](src/layout/MvLink/MvLink.jsx)             | Link component.    |
 
 <br>
 <hr>

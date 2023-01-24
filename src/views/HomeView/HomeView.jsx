@@ -1,8 +1,8 @@
-import React from 'react'
+import { MvMain } from "@layout/MvMain/MvMain"
 
 const HomeView = () => {
   return (
-    <div>HomeView</div>
+    <MvMain>HomeView</MvMain>
   )
 }
 

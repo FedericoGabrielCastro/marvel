@@ -1,7 +1,18 @@
-import React from 'react'
+import { RouteProvider } from "@routes/RouteProvider/RouteProvider"
+import "@style/style.scss"
 
+/**
+ * App.
+ * 
+ * Purpose:
+ * - Render the app with all providers.
+ * 
+ * @returns App with providers
+ */
 const App = () => {
-  return <div>app</div>
+  return (
+    <RouteProvider/>
+  )
 }
 
 export default App

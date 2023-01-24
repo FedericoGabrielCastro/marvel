@@ -1,8 +1,21 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
-const MvHeader = () => {
+import { MvLink } from "../MvLink/MvLink"
+
+/**
+ * MvHeader.
+ * 
+ * Purpose:
+ * - Render navbar with navigation.
+ * 
+ * @returns Navbar
+ */
+export const MvHeader = () => {
   return (
-    <div>MvHeader</div>
+    <div className="MvHeader">
+      <MvLink path="/characters" text="Characters" />
+      <MvLink path="/comic" text="Comics" />
+    </div>
   )
 }
 
