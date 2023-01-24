@@ -1,8 +1,11 @@
 // Views
 
 // Sections
+@import '../views/HomeView/sections/HomeViewOptionSection/HomeViewOptionSectionStyle';
 
 // Layouts
 @import '../layout/MvHeader/MvHeaderStyle'; // Navbar styles.
+@import '../layout/MvMain/_MvMainStyle.scss'; // Main styles.
 @import '../layout/MvLink/_MvLinkStyle.scss'; // Link styles.
-
+@import '../layout/MvSection/_MvSectionStyle.scss'; // Section styles.
+@import '../layout/MvFooter/_MvFooterStyle.scss'; // Footer styles.

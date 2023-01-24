@@ -1,9 +1,16 @@
-import React from 'react'
-
-const MvSection = () => {
+/**
+ * MvSection.
+ * 
+ * Purpose:
+ * - Envolve sections pages with a section.
+ * 
+ * @param children Render a Function Component. 
+ * @returns section with children.
+ */
+export const MvSection = ({children}) => {
   return (
-    <div>MvSection</div>
+    <section className="MpSection">
+      {children}
+    </section>
   )
 }
-
-export default MvSection

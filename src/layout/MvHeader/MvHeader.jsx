@@ -13,7 +13,8 @@ import { MvLink } from "../MvLink/MvLink"
 export const MvHeader = () => {
   return (
     <div className="MvHeader">
-      <MvLink path="/characters" text="Characters" />
+      <MvLink path="/" text="Home" />
+      <MvLink path="/character" text="Characters" />
       <MvLink path="/comic" text="Comics" />
     </div>
   )

@@ -7,11 +7,11 @@ import React from 'react'
  * - Envolve pages with a mian.
  * 
  * @param children Render a Function Component. 
- * @returns 
+ * @returns Main with children.
  */
 export const MvMain = ({children}) => {
   return (
-    <main data-testid="main-page">
+    <main className='MvMain'>
       {children}
     </main>
   )
