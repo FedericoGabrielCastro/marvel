@@ -19,7 +19,9 @@ export default defineConfig({
       '@layout': path.resolve(__dirname, './src/layout'),
       '@views': path.resolve(__dirname, './src/views'),
       '@routes': path.resolve(__dirname, './src/routes'),
-      '@style': path.resolve(__dirname, './src/style')
+      '@style': path.resolve(__dirname, './src/style'),
+      '@api': path.resolve(__dirname, './src/api'),
+      '@redux': path.resolve(__dirname, './src/redux'),
     }
   }
 })

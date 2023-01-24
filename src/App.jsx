@@ -1,4 +1,6 @@
 import { RouteProvider } from "@routes/RouteProvider/RouteProvider"
+import { Provider } from "react-redux"
+import { store } from "./redux/store"
 import "@style/style.scss"
 
 /**
@@ -11,7 +13,9 @@ import "@style/style.scss"
  */
 const App = () => {
   return (
-    <RouteProvider/>
+    <Provider store={store}>
+      <RouteProvider/>
+    </Provider>
   )
 }
 
