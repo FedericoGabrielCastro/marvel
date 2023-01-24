@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { MvMain } from "@layout/MvMain/MvMain"
 import { useDispatch } from "react-redux"
 import { getCharactersAction } from "@redux/actions/getCharactersAction"
+import { CharacterViewCharactersSection } from "@views/CharacterView/sections/CharacterViewCharactersSection/CharacterViewCharactersSection"
 
 /**
  * CharacterView.
@@ -20,7 +21,9 @@ const CharacterView = () => {
   },[dispatch])
 
   return (
-    <MvMain>CharacterView</MvMain>
+    <MvMain>
+      <CharacterViewCharactersSection />
+    </MvMain>
   )
 }
 

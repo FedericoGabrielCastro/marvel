@@ -1,0 +1,15 @@
+.MvCharacterCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+
+    &__name {
+        text-align: center;
+    }
+
+    &__image {
+        height: 200px;
+        object-fit: fill;
+    }
+}

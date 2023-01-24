@@ -9,7 +9,10 @@ import { GET_CHARACTERS, GET_CHARACTERS_ERROR } from "../types"
 export const initialState = {
     characters: [],
     error: null,
-    loading: true
+    loading: true,
+    offset: null,
+    total: null,
+    count: null,
 }
 
 /**
@@ -29,14 +32,18 @@ export const charactersReducer = (state = initialState, { type, characters } ) =
             return {
                 ...state,
                 loading: false,
-                characters: characters,
+                characters: characters.results,
+                offset: characters.offset,
+                limit: characters.limit,
+                total: characters.total,
+                count: characters.count
 
             }
         case GET_CHARACTERS_ERROR:
             return {
                 ...state,
                 loading: true,
-                error: characters
+                error: error
             }
         default:
             return state
