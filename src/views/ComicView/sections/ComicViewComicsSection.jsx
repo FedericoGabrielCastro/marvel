@@ -46,7 +46,8 @@ export const ComicViewComicsSection = () => {
                 <table className="comicSection__table">
                     <thead className="comicSection__table__thead">
                         <tr>
-                            <th>Comic Title</th>
+                            <th className="noDisplay-600">Image</th>
+                            <th>Title</th>
                             <th>Price</th>
                             <th>detail</th>
                         </tr>
@@ -55,6 +56,13 @@ export const ComicViewComicsSection = () => {
                         {
                             comicsList.map((comic) => 
                                 <tr key={comic.id} className="comicSection__table__thbody__tr">
+                                    <td className="comicSection__table__thbody__tr__td noDisplay-600">
+                                        <img 
+                                            className="comicSection__table__thbody__tr__td__img"
+                                            src={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`} 
+                                            alt="img"
+                                        />
+                                    </td>
                                     <td className="comicSection__table__thbody__tr__td">{comic.title}</td>
                                     <td className="comicSection__table__thbody__tr__td">$ {comic?.prices[0].price}</td>
                                     <td className="comicSection__table__thbody__tr__td">

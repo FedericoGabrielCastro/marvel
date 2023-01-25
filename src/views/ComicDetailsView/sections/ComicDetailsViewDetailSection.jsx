@@ -23,16 +23,24 @@ export const ComicDetailsViewDetailSection = () => {
      * imageComic.
      * 
      * Purpose:
-     * - Load image character.
+     * - Load image comic.
      */
     const imageComic = `${comicData?.thumbnail?.path}.${comicData?.thumbnail?.extension}`
+
+    /**
+     * priceComic.
+     * 
+     * Purpose:
+     * - Load price comic.
+     */
+    const priceComic = `$ ${comicData?.prices?.map(price => price.price)}`
 
     return (
         <MvSection>
             <div className="comicDetail">
                 <div className="comicDetail__title">
                     <h1>{comicData.title}</h1>
-                    <span>$ {comicData.prices[0].price}</span>
+                    <span>{priceComic}</span>
                 </div>
                 <div className="comicDetail__data">
                     <img className="comicDetail__data__image" src={imageComic} alt={comicData.title} />

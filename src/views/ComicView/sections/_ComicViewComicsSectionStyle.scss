@@ -16,6 +16,11 @@
                 &__td {
                     border-bottom: 2px solid #252525;
                     min-width: 100px;
+
+                    &__img {
+                        height: 100px;
+                        object-fit: fill;
+                    }
                 }
             }
         }

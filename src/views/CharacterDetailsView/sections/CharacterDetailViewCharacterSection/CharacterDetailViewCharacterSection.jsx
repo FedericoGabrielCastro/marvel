@@ -52,8 +52,8 @@ export const CharacterDetailViewCharacterSection = () => {
                 <table className="characterDetail__table">
                     <thead className="characterDetail__table__thead">
                         <tr>
-                            <th>Comic name</th>
-                            <th>Comic detail</th>
+                            <th>It appears in</th>
+                            <th>Character detail</th>
                         </tr>
                     </thead>
                     <tbody className="characterDetail__table__thbody">
@@ -62,7 +62,7 @@ export const CharacterDetailViewCharacterSection = () => {
                                 <tr key={index} className="characterDetail__table__thbody__tr">
                                     <td className="characterDetail__table__thbody__tr__td">{comic.name}</td>
                                     <td className="characterDetail__table__thbody__tr__td">
-                                        <MvLink path={`/comic/${comic.resourceURI?.split("/").pop()}`} icon=    {<BsArrowRight />}/>
+                                        <MvLink path={`/comic/${comic.resourceURI?.split("/").pop()}`} icon={<BsArrowRight />}/>
                                     </td>
                                 </tr>)
                         }

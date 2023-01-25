@@ -12,3 +12,9 @@
 @import '../layout/MvSection/_MvSectionStyle.scss'; // Section styles.
 @import '../layout/MvFooter/_MvFooterStyle.scss'; // Footer styles.
 @import '../layout/MvCard/_MvCardStyle.scss'; // card.
+
+.noDisplay-600 {
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+}
