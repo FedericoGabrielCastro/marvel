@@ -8,7 +8,8 @@ import { GET_CHARACTER_DETAILS, GET_CHARACTER_DETAILS_ERROR } from "@redux/types
  */
 export const initialState = {
     character: [],
-    loading: true
+    loading: true,
+    error: null
 }
 
 /**
@@ -19,7 +20,7 @@ export const initialState = {
  * 
  * @param type type.
  * @param character Character data. 
- * @returns 
+ * @returns Character details.
  */
 export const characterDetailReducer = (state = initialState, { type, character } ) => {
     
