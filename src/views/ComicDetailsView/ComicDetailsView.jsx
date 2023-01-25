@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { useParams } from "react-router-dom" 
 import { MvMain } from "@layout/MvMain/MvMain"
 import { getComicDetailAction } from "@redux/actions/getComicDetailAction"
+import { ComicDetailsViewDetailSection } from "@views/ComicDetailsView/sections/ComicDetailsViewDetailSection"
 
 /**
  * ComicDetailsView.
@@ -37,7 +38,9 @@ const ComicDetailsView = () => {
     },[dispatch])
 
     return (
-        <MvMain>ComicDetailsView</MvMain>
+        <MvMain>
+            <ComicDetailsViewDetailSection />
+        </MvMain>
     )
 }
 
