@@ -1,6 +1,8 @@
 // Sections
 @import '../views/HomeView/sections/HomeViewOptionSection/HomeViewOptionSectionStyle'; // HmeView option section.
 @import '../views/CharacterView/sections/CharacterViewCharactersSection/_CharacterViewCharactersSectionStyle.scss'; // CharacterView characters section.
+@import '../views/CharacterDetailsView/sections/CharacterDetailViewCharacterSection/_CharacterDetailViewCharacterSectionStyle.scss'; // Character detail section.
+@import '../views/ComicView/sections/_ComicViewComicsSectionStyle.scss'; // ComicView comics section.
 
 // Layouts
 @import '../layout/MvHeader/MvHeaderStyle'; // Navbar styles.
@@ -8,4 +10,4 @@
 @import '../layout/MvLink/_MvLinkStyle.scss'; // Link styles.
 @import '../layout/MvSection/_MvSectionStyle.scss'; // Section styles.
 @import '../layout/MvFooter/_MvFooterStyle.scss'; // Footer styles.
-@import '../layout/MvCharacterCard/_MvCharacterCardStyle.scss'; // Character card.
+@import '../layout/MvCard/_MvCardStyle.scss'; // card.

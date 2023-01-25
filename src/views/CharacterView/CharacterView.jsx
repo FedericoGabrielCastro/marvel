@@ -16,6 +16,12 @@ const CharacterView = () => {
   
   const dispatch = useDispatch()
 
+  /**
+   * useEffect.
+   * 
+   * Purpose: 
+   * - Dispatch an action to get all characters.
+   */
   useEffect(() => {
     dispatch(getCharactersAction())
   },[dispatch])

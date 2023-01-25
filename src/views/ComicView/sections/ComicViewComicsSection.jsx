@@ -1,0 +1,72 @@
+import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { MvSection } from "@layout/MvSection/MvSection"
+import { MvLink } from "@layout/MvLink/MvLink"
+import { BsArrowRight } from "react-icons/bs"
+
+/**
+ * ComicViewComicsSection.
+ * 
+ * Purpose:
+ * - Section to show all comics.
+ */
+export const ComicViewComicsSection = () => {
+
+    /**
+     * useNavigate.
+     *
+     * Purpose:
+     * - Hook navigate (navigate to anohter page)
+     */
+    const navigate = useNavigate()
+
+    /**
+     * comicsList.
+     * 
+     * Purpose:
+     * - Get comics from reducer store.
+     */
+    const comicsList = useSelector(store => store.comicsReducer.comics)
+
+     /**
+     * handleClickComic.
+     * 
+     * Puporse:
+     * - Capture the id of card and go to comic detail.
+     * 
+     * @param id ID of comic card. 
+     */
+     const handleClickComic = (id) => {
+        navigate(`/comic/${id}`)
+    }
+
+    return (
+        <MvSection>
+            <div className="comicSection">
+                <table className="comicSection__table">
+                    <thead className="comicSection__table__thead">
+                        <tr>
+                            <th>Comic Title</th>
+                            <th>Price</th>
+                            <th>detail</th>
+                        </tr>
+                    </thead>
+                    <tbody className="comicSection__table__thbody">
+                        {
+                            comicsList.map((comic) => 
+                                <tr key={comic.id} className="comicSection__table__thbody__tr">
+                                    <td className="comicSection__table__thbody__tr__td">{comic.title}</td>
+                                    <td className="comicSection__table__thbody__tr__td">$ {comic?.prices[0].price}</td>
+                                    <td className="comicSection__table__thbody__tr__td">
+                                        <MvLink path={`/comic/${comic.id}`} icon={<BsArrowRight />}/>
+                                    </td>
+                                </tr>
+                            )
+                        }
+                    </tbody>
+                </table>
+                {/* TODO: button to get more results. */}
+            </div>
+        </MvSection>
+    )
+}

@@ -1,6 +1,7 @@
 import { MvSection } from "@layout/MvSection/MvSection"
 import { useSelector } from "react-redux"
-import { MvCharacterCard } from "@layout/MvCharacterCard/MvCharacterCard"
+import { MvCard } from "@layout/MvCard/MvCard"
+import { useNavigate } from "react-router-dom"
 
 /**
  * CharacterViewCharactersSection.
@@ -13,6 +14,15 @@ import { MvCharacterCard } from "@layout/MvCharacterCard/MvCharacterCard"
 export const CharacterViewCharactersSection = () => {
 
     /**
+     * useNavigate.
+     *
+     * Purpose:
+     * - Hook navigate (navigate to anohter page)
+     */
+    const navigate = useNavigate()
+
+    /**
+     * charactersList.
      * 
      * Purpose:
      * - Get characters from reducer store.
@@ -28,7 +38,7 @@ export const CharacterViewCharactersSection = () => {
      * @param id ID of character card. 
      */
     const handleClickCharacter = (id) => {
-        
+        navigate(`/character/${id}`)
     }
 
     return (
@@ -36,10 +46,9 @@ export const CharacterViewCharactersSection = () => {
             <div className="charactersSection">
                 {
                     charactersList.map((character) => 
-                        <MvCharacterCard 
+                        <MvCard 
                             key={character.id}
                             onClick={() => handleClickCharacter(character.id)}
-                            id={character.id} 
                             name={character.name} 
                             image={`${character.thumbnail.path}.${character.thumbnail.extension} `}
                         />

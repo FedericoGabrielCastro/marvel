@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, GET_CHARACTERS_ERROR } from "../types"
+import { GET_CHARACTERS, GET_CHARACTERS_ERROR } from "@redux/types"
 
 /**
  * InitialState.
@@ -23,7 +23,7 @@ export const initialState = {
  * 
  * @param type type.
  * @param characters Result of axios get characters. 
- * @returns 
+ * @returns characters list.
  */
 export const charactersReducer = (state = initialState, { type, characters } ) => {
     
