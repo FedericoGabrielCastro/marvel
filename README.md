@@ -16,6 +16,14 @@
     Instructions
 </h1>
 
+#### Create a file .env an add this: 
+
+```bash
+VITE_MARVEL_PUBLIC_KEY=963def3c08d9f47810421fccaf47fe67
+VITE_MARVEL_PRIVATE_KEY=b7bc7c4f10cf6e297811f98a4e1a21efb83d47c8
+VITE_MARVEL_BASE_URL=https://gateway.marvel.com:443/v1/public
+```
+
 #### Installing Node Modules
 
 ```bash
@@ -95,7 +103,7 @@ yarn run prettier
 | -------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | [src/redux/actions/changeCharctersOffsetAction.js](src/redux/actions/changeCharctersOffsetAction.js)     | Change offset in pagination action. |
 | [src/redux/actions/getCharacterDetailAction.js](src/redux/actions/getCharacterDetailAction.js)           | Get characters details action.      |
-| [src/redux/actions/getCharactersAction.js](src/redux/actions/getCharactersAction.js])                    | Get all characters action.          |
+| [src/redux/actions/getCharactersAction.js](src/redux/actions/getCharactersAction.js)                    | Get all characters action.          |
 | [src/redux/actions/getComicDetailAction.js](src/redux/actions/getComicDetailAction.js)                   | Get comics details action.          |
 | [src/redux/actions/getComicsAction.js](src/redux/actions/getComicsAction.js)                             | Get all comics action.              |
 | [src/redux/actions/setLoadingAction.js](src/redux/actions/setLoadingAction.js)                           | Set status loading action.          |
@@ -135,4 +143,4 @@ yarn run prettier
 <hr>
 <br>
 
-<p align='center'><img width='100%' src='https://media.tenor.com/_Xvz9x5xfjwAAAAC/spiderman-tobey-maguire.gif'/></p>**
+<p align='center'><img width='100%' src='https://media.tenor.com/_Xvz9x5xfjwAAAAC/spiderman-tobey-maguire.gif'/></p>
