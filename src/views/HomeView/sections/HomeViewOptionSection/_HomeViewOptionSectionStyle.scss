@@ -1,0 +1,16 @@
+.homeViewCarrusel {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  & img {
+    height: 300px;
+    object-fit: cover;
+
+    @media screen and (max-width: 600px) {
+      height: 180px;
+    }
+  }
+}

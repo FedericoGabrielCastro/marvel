@@ -1,16 +1,15 @@
 .mvCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    &__name {
-        text-align: center;
-    }
+  &__name {
+    text-align: center;
+  }
 
-    &__image {
-        height: 200px;
-        width: 330px;
-        object-fit: fill;
-    }
+  &__image {
+    height: 200px;
+    width: 330px;
+    object-fit: fill;
+  }
 }

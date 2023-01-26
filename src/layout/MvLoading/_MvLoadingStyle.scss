@@ -1,40 +1,40 @@
 .mvLoading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    color: #337ab7;
-    animation: pulse 2s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  color: #337ab7;
+  animation: pulse 2s ease-in-out infinite;
 
-    &::after {
-        content: " ";
-        display: block;
-        width: 34px;
-        height: 34px;
-        margin: 8px;
-        border-radius: 50%;
-        border: 6px solid #fff;
-        border-color: #337ab7 transparent #337ab7 transparent;
-        animation: lds-dual-ring 1.2s linear infinite;
-    }
-
+  &::after {
+    content: ' ';
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #337ab7 transparent #337ab7 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
 }
 
 @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulse {
-    0%, 100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }

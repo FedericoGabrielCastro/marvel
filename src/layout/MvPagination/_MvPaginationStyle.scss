@@ -1,35 +1,34 @@
 .mvPagination {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  &__container {
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: center;
+    gap: 5px;
 
-    &__container {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
+    @media screen and (max-width: 600px) {
+      gap: 0;
+    }
+  }
 
-        @media screen and (max-width: 600px) {
-            gap: 0;
-        }
-    }
-    
-    &__page-item {
-        color: transparent;
-        padding: 5px;
+  &__page-item {
+    color: transparent;
+    padding: 5px;
 
-        @media screen and (max-width: 600px) {
-            padding: 0;;
-        }
+    @media screen and (max-width: 600px) {
+      padding: 0;
     }
-    
-    &__page-link {
-        color: #fff;
-        background-color: #262626;
-        padding: 5px;
-    }
+  }
 
-    &__active {
-        background-color: #337ab7;
-    }
+  &__page-link {
+    color: #fff;
+    background-color: #262626;
+    padding: 5px;
+  }
+
+  &__active {
+    background-color: #337ab7;
+  }
 }

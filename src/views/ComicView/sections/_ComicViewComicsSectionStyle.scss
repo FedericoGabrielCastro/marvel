@@ -1,28 +1,27 @@
 .comicSection {
-    
-    &__table {
-        width: 90vw;
+  &__table {
+    width: 90vw;
 
-        &__thead {
-            background-color: #000;
-        }
-
-        &__thbody {
-            text-align: center;
-
-            &__tr {
-                height: 5vh;
-
-                &__td {
-                    border-bottom: 2px solid #252525;
-                    min-width: 100px;
-
-                    &__img {
-                        height: 100px;
-                        object-fit: fill;
-                    }
-                }
-            }
-        }
+    &__thead {
+      background-color: #000;
     }
+
+    &__thbody {
+      text-align: center;
+
+      &__tr {
+        height: 5vh;
+
+        &__td {
+          border-bottom: 2px solid #252525;
+          min-width: 100px;
+
+          &__img {
+            height: 100px;
+            object-fit: fill;
+          }
+        }
+      }
+    }
+  }
 }

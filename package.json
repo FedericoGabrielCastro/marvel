@@ -7,11 +7,13 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "jest --watchAll"
+    "prettier": "npx prettier src --write"
   },
   "dependencies": {
     "axios": "^1.2.3",
     "framer-motion": "^8.5.2",
+    "md5": "^2.3.0",
+    "popmotion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -28,6 +30,11 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
+    "prettier": "^2.8.3",
     "vite": "^3.1.0"
-  }
+  },
+  "main": "main.jsx",
+  "repository": "https://github.com/FedericoGabrielCastro/marvel.git",
+  "author": "federico <fgc_castro@live.com>",
+  "license": "MIT"
 }
