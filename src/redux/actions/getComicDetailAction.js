@@ -14,7 +14,7 @@ import { marvelBaseUrl } from "@api/marvelBaseUrl"
  */
 export const getComicDetailAction = ({id}) => async dispatch  => {
     
-    const response = await axios.get(`${marvelBaseUrl}/comics/${id}${marvelCredentials}`)
+    const response = await axios.get(`${marvelBaseUrl}/comics/${id}?${marvelCredentials}`)
 
     try {
         dispatch({

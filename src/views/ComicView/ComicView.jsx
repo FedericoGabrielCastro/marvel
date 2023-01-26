@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { MvMain } from "@layout/MvMain/MvMain"
 import { ComicViewComicsSection } from "@views/ComicView/sections/ComicViewComicsSection"
 import { getComicsAction } from "@redux/actions/getComicsAction"
+import { setLoadingAction } from "@redux/actions/setLoadingAction"
 
 /**
  * ComicView.
@@ -23,6 +24,7 @@ const ComicView = () => {
      * - Dispatch an action to get all comics.
      */
     useEffect(() => {
+        dispatch(setLoadingAction())
         dispatch(getComicsAction())
     },[dispatch])
 

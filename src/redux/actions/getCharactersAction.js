@@ -8,15 +8,17 @@ import { marvelBaseUrl } from "@api/marvelBaseUrl"
  * 
  * Puporse:
  * - Fetch characters from api.
+ * 
+ * @param offset Numer to know pagination.
  */
-export const getCharactersAction = () => async dispatch => {
+export const getCharactersAction = ({offset}) => async dispatch => {
     
-    const response = await axios.get(`${marvelBaseUrl}/characters${marvelCredentials}`)
+    const response = await axios.get(`${marvelBaseUrl}/characters?limit=20&offset=${offset}&${marvelCredentials}`)
 
     try {
         dispatch({
             type: GET_CHARACTERS,
-            characters: response.data.data
+            characters: response.data
         })
     } catch (error) {
         dispatch({

@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect} from 'react'
 
 /**
  * MvMain
@@ -10,6 +10,13 @@ import React from 'react'
  * @returns Main with children.
  */
 export const MvMain = ({children}) => {
+
+  /**
+   * Purpose:
+   * - scroll to top when something change.
+   */
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
     <main className='MvMain'>
       {children}

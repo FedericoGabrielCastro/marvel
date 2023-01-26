@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import { MvMain } from "@layout/MvMain/MvMain"
 import { getComicDetailAction } from "@redux/actions/getComicDetailAction"
 import { ComicDetailsViewDetailSection } from "@views/ComicDetailsView/sections/ComicDetailsViewDetailSection"
+import { setLoadingAction } from "@redux/actions/setLoadingAction"
 
 /**
  * ComicDetailsView.
@@ -32,6 +33,7 @@ const ComicDetailsView = () => {
      * - Dispatch an action to get details about one comic.
      */
     useEffect(() => {
+        dispatch(setLoadingAction())
         dispatch(getComicDetailAction({
             id: id
         }))

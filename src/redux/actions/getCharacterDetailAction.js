@@ -14,7 +14,7 @@ import { marvelBaseUrl } from "@api/marvelBaseUrl"
  */
 export const getCharacterDetailAction = ({id}) => async dispatch  => {
     
-    const response = await axios.get(`${marvelBaseUrl}/characters/${id}${marvelCredentials}`)
+    const response = await axios.get(`${marvelBaseUrl}/characters/${id}?${marvelCredentials}`)
 
     try {
         dispatch({

@@ -6,12 +6,14 @@
 @import "../views/ComicDetailsView/sections/_ComicDetailsViewDetailSectionStyle.scss"; // ComicDetailsView details section
 
 // Layouts
-@import '../layout/MvHeader/MvHeaderStyle'; // Navbar styles.
-@import '../layout/MvMain/_MvMainStyle.scss'; // Main styles.
-@import '../layout/MvLink/_MvLinkStyle.scss'; // Link styles.
-@import '../layout/MvSection/_MvSectionStyle.scss'; // Section styles.
-@import '../layout/MvFooter/_MvFooterStyle.scss'; // Footer styles.
-@import '../layout/MvCard/_MvCardStyle.scss'; // card.
+@import '../layout/MvHeader/MvHeaderStyle'; // Navbar layout.
+@import '../layout/MvMain/_MvMainStyle.scss'; // Main layout.
+@import '../layout/MvLink/_MvLinkStyle.scss'; // Link layout.
+@import '../layout/MvSection/_MvSectionStyle.scss'; // Section layout.
+@import '../layout/MvFooter/_MvFooterStyle.scss'; // Footer layout.
+@import '../layout/MvCard/_MvCardStyle.scss'; // card layout.
+@import '../layout/MvPagination/_MvPaginationStyle.scss'; // Pagination layout.
+@import '../layout/MvLoading/_MvLoadingStyle.scss'; // Loading layout
 
 .noDisplay-600 {
     @media screen and (max-width: 600px) {

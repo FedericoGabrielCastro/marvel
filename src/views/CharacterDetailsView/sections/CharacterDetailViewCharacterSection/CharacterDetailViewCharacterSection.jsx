@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import { MvSection } from "@layout/MvSection/MvSection"
 import { MvLink } from "@layout/MvLink/MvLink"
 import { BsArrowRight } from "react-icons/bs"
-
+import { MvLoading } from "@layout/MvLoading/MvLoading"
 
 /**
  * CharacterDetailViewCharacterSection.
@@ -23,6 +23,14 @@ export const CharacterDetailViewCharacterSection = () => {
     const characterData = useSelector(store => store.characterDetailReducer.character)
 
     /**
+     * loadingStatus
+     * 
+     * Purpose:
+     * - Get boolean loading state.
+     */
+    const loadingStatus = useSelector(store => store.characterDetailReducer.loading)
+
+    /**
      * imageCharacter.
      * 
      * Purpose:
@@ -37,6 +45,12 @@ export const CharacterDetailViewCharacterSection = () => {
      * - Map character comics.
      */
     const comicsData = characterData.comics
+
+    /**
+     * Purpose:
+     * - Check if the page is loading.
+     */
+    if (loadingStatus) return <MvLoading />
 
     return (
         <MvSection>
@@ -68,15 +82,7 @@ export const CharacterDetailViewCharacterSection = () => {
                         }
                     </tbody>
                 </table>
-                {/* TODO: Put a button to search more result. */}
             </div>
         </MvSection>
     )
 }
-
-CharacterDetailViewCharacterSection
-
-// • Nombre
-// • Imagen - 
-// • Descripcion
-// • Comics en los que aparece

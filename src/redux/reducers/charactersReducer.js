@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, GET_CHARACTERS_ERROR } from "@redux/types"
+import { GET_CHARACTERS, GET_CHARACTERS_ERROR, LOADING } from "@redux/types"
 
 /**
  * InitialState.
@@ -8,11 +8,9 @@ import { GET_CHARACTERS, GET_CHARACTERS_ERROR } from "@redux/types"
  */
 export const initialState = {
     characters: [],
+    totalResults: null,
     error: null,
     loading: true,
-    offset: null,
-    total: null,
-    count: null,
 }
 
 /**
@@ -28,16 +26,17 @@ export const initialState = {
 export const charactersReducer = (state = initialState, { type, characters } ) => {
     
     switch (type) {
+        case LOADING:
+            return {
+                ...state,
+                loading: true,
+            }
         case GET_CHARACTERS:
             return {
                 ...state,
                 loading: false,
-                characters: characters.results,
-                offset: characters.offset,
-                limit: characters.limit,
-                total: characters.total,
-                count: characters.count
-
+                characters: characters.data.results,
+                totalResults: characters.data.total
             }
         case GET_CHARACTERS_ERROR:
             return {

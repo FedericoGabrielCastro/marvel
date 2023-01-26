@@ -1,4 +1,4 @@
-import { GET_CHARACTER_DETAILS, GET_CHARACTER_DETAILS_ERROR } from "@redux/types"
+import { GET_CHARACTER_DETAILS, GET_CHARACTER_DETAILS_ERROR, LOADING } from "@redux/types"
 
 /**
  * InitialState.
@@ -25,6 +25,11 @@ export const initialState = {
 export const characterDetailReducer = (state = initialState, { type, character } ) => {
     
     switch (type) {
+        case LOADING:
+            return {
+                ...state,
+                loading: true,
+            }
         case GET_CHARACTER_DETAILS:
             return {
                 ...state,

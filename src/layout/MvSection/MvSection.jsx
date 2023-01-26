@@ -9,7 +9,7 @@
  */
 export const MvSection = ({children}) => {
   return (
-    <section className="MpSection">
+    <section className="MvSection">
       {children}
     </section>
   )

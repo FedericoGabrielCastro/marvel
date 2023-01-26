@@ -11,6 +11,14 @@ import { MvLink } from "../MvLink/MvLink"
  * @returns Navbar
  */
 export const MvHeader = () => {
+
+  /**
+   * Purpose:
+   * - scroll to top when something change.
+   */
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
   return (
     <div className="MvHeader">
       <MvLink path="/" text="Home" />

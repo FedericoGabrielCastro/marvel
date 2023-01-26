@@ -13,6 +13,6 @@ import { Link } from "react-router-dom"
  */
 export const MvLink = ({path, text, icon}) => {
   return (
-    <Link className="MvLink" to={path}>{text}{icon}</Link>
+    <Link target="_blanck" className="MvLink" to={path}>{text}{icon}</Link>
   )
 }

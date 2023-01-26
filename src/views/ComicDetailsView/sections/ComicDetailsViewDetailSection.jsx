@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { MvSection } from "@layout/MvSection/MvSection"
+import { MvLoading } from "@layout/MvLoading/MvLoading"
 
 /**
  * ComicDetailsViewDetailSection.
@@ -20,6 +21,14 @@ export const ComicDetailsViewDetailSection = () => {
     const comicData = useSelector(store => store.comicDetailReducer.comic)
 
     /**
+     * loadingStatus
+     * 
+     * Purpose:
+     * - Get boolean loading state.
+     */
+    const loadingStatus = useSelector(store => store.comicDetailReducer.loading)
+    
+    /**
      * imageComic.
      * 
      * Purpose:
@@ -34,6 +43,12 @@ export const ComicDetailsViewDetailSection = () => {
      * - Load price comic.
      */
     const priceComic = `$ ${comicData?.prices?.map(price => price.price)}`
+
+    /**
+     * Purpose:
+     * - Check if the page is loading.
+     */
+    if (loadingStatus) return <MvLoading />
 
     return (
         <MvSection>

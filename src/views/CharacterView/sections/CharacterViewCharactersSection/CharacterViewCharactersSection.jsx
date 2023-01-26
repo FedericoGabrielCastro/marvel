@@ -2,6 +2,7 @@ import { MvSection } from "@layout/MvSection/MvSection"
 import { useSelector } from "react-redux"
 import { MvCard } from "@layout/MvCard/MvCard"
 import { useNavigate } from "react-router-dom"
+import { MvLoading } from "@layout/MvLoading/MvLoading"
 
 /**
  * CharacterViewCharactersSection.
@@ -30,6 +31,14 @@ export const CharacterViewCharactersSection = () => {
     const charactersList = useSelector(store => store.charactersReducer.characters)
 
     /**
+     * loadingStatus.
+     * 
+     * Purpose:
+     * - Get boolean state from loading reducer. 
+     */
+    const loadingStatus = useSelector(store => store.charactersReducer.loading)
+
+    /**
      * handleClickCharacter.
      * 
      * Puporse:
@@ -41,20 +50,28 @@ export const CharacterViewCharactersSection = () => {
         navigate(`/character/${id}`)
     }
 
+    /**
+     * Purpose:
+     * - Check if the page is loading.
+     */
+    if (loadingStatus) return <MvLoading />
+
     return (
         <MvSection>
-            <div className="charactersSection">
-                {
-                    charactersList.map((character) => 
-                        <MvCard 
-                            key={character.id}
-                            onClick={() => handleClickCharacter(character.id)}
-                            name={character.name} 
-                            image={`${character.thumbnail.path}.${character.thumbnail.extension} `}
-                        />
-                    )
-                }
-            </div>
+            {
+                <div className="charactersSection">
+                    {
+                        charactersList.map((character) => 
+                            <MvCard 
+                                key={character.id}
+                                onClick={() => handleClickCharacter(character.id)}
+                                name={character.name} 
+                                image={`${character.thumbnail.path}.${character.thumbnail.extension} `}
+                            />
+                        )
+                    }
+                </div>
+            }
         </MvSection>
     )
 }

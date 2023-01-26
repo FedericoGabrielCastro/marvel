@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom"
 import { MvSection } from "@layout/MvSection/MvSection"
 import { MvLink } from "@layout/MvLink/MvLink"
 import { BsArrowRight } from "react-icons/bs"
+import { MvLoading } from "@layout/MvLoading/MvLoading"
+
 
 /**
  * ComicViewComicsSection.
@@ -20,25 +22,29 @@ export const ComicViewComicsSection = () => {
      */
     const navigate = useNavigate()
 
+    
     /**
      * comicsList.
      * 
      * Purpose:
      * - Get comics from reducer store.
+    */
+   const comicsList = useSelector(store => store.comicsReducer.comics)
+   
+    /**
+     * loadingStatus
+     * 
+     * Purpose:
+     * - Get boolean loading state.
      */
-    const comicsList = useSelector(store => store.comicsReducer.comics)
+    const loadingStatus = useSelector(store => store.comicsReducer.loading)
 
-     /**
-     * handleClickComic.
-     * 
-     * Puporse:
-     * - Capture the id of card and go to comic detail.
-     * 
-     * @param id ID of comic card. 
+
+    /**
+     * Purpose:
+     * - Check if the page is loading.
      */
-     const handleClickComic = (id) => {
-        navigate(`/comic/${id}`)
-    }
+    if (loadingStatus) return <MvLoading />
 
     return (
         <MvSection>

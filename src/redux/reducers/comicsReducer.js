@@ -1,4 +1,4 @@
-import { GET_COMICS, GET_COMICS_ERROR } from "@redux/types"
+import { GET_COMICS, GET_COMICS_ERROR, LOADING } from "@redux/types"
 
 /**
  * InitialState.
@@ -26,6 +26,11 @@ export const initialState = {
 export const comicsReducer = (state = initialState, { type, comics } ) => {
     
     switch (type) {
+        case LOADING:
+            return {
+                ...state,
+                loading: true,
+            }
         case GET_COMICS:
             return {
                 ...state,

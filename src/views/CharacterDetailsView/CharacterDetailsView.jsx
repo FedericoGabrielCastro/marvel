@@ -4,6 +4,7 @@ import { getCharacterDetailAction } from "@redux/actions/getCharacterDetailActio
 import { useParams } from "react-router-dom" 
 import { MvMain } from "@layout/MvMain/MvMain"
 import { CharacterDetailViewCharacterSection } from "@views/CharacterDetailsView/sections/CharacterDetailViewCharacterSection/CharacterDetailViewCharacterSection"
+import { setLoadingAction } from "@redux/actions/setLoadingAction"
 
 /**
  * CharacterDetailsView.
@@ -36,6 +37,7 @@ const CharacterDetailsView = () => {
      * - Send id into an action and wait to reducer.
      */
     useEffect(() => {
+        dispatch(setLoadingAction())
         dispatch(getCharacterDetailAction({
             id: id
         }))
