@@ -18,23 +18,26 @@ export const initialState = {
  * Purpose:
  * - Set comics list.
  *
+ * @param error error.
  * @param type type.
  * @param comics Result of axios get comics.
  * @returns comics list
  */
 
-export const comicsReducer = (state = initialState, { type, comics }) => {
+export const comicsReducer = (state = initialState, { type, comics, error }) => {
   switch (type) {
     case LOADING:
       return {
         ...state,
         loading: true,
+        error: null,
       };
     case GET_COMICS:
       return {
         ...state,
         loading: false,
         comics: comics.results,
+        error: null,
       };
     case GET_COMICS_ERROR:
       return {

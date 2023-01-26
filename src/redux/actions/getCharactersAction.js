@@ -12,9 +12,9 @@ import { marvelInstance } from '@api/marvelApiIntance';
 export const getCharactersAction =
   ({ offset }) =>
   async (dispatch) => {
-    const response = await marvelInstance.get(`characters?limit=20&offset=${offset}`);
-
     try {
+      const response = await marvelInstance.get(`characters?limit=20&offset=${offset}`);
+
       dispatch({
         type: GET_CHARACTERS,
         characters: response.data,
@@ -22,7 +22,7 @@ export const getCharactersAction =
     } catch (error) {
       dispatch({
         type: GET_CHARACTERS_ERROR,
-        characters: response.error,
+        error: error.message,
       });
     }
   };

@@ -8,9 +8,9 @@ import { marvelInstance } from '@api/marvelApiIntance';
  * - Fetch characters from api.
  */
 export const getComicsAction = () => async (dispatch) => {
-  const response = await marvelInstance.get('/comics');
-
   try {
+    const response = await marvelInstance.get('/comics');
+
     dispatch({
       type: GET_COMICS,
       comics: response.data.data,
@@ -18,7 +18,7 @@ export const getComicsAction = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: GET_COMICS_ERROR,
-      comics: response.error,
+      error: error.message,
     });
   }
 };

@@ -13,9 +13,9 @@ import { marvelInstance } from '@api/marvelApiIntance';
 export const getCharacterDetailAction =
   ({ id }) =>
   async (dispatch) => {
-    const response = await marvelInstance.get(`/characters/${id}`);
-
     try {
+      const response = await marvelInstance.get(`/characters/${id}`);
+
       dispatch({
         type: GET_CHARACTER_DETAILS,
         character: response.data.data.results,
@@ -23,7 +23,7 @@ export const getCharacterDetailAction =
     } catch (error) {
       dispatch({
         type: GET_CHARACTER_DETAILS_ERROR,
-        character: response.error,
+        error: error.message,
       });
     }
   };

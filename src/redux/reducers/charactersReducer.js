@@ -19,16 +19,18 @@ export const initialState = {
  * Purpose:
  * - Set characters list.
  *
+ * @param error error.
  * @param type type.
  * @param characters Result of axios get characters.
  * @returns characters list.
  */
-export const charactersReducer = (state = initialState, { type, characters }) => {
+export const charactersReducer = (state = initialState, { type, characters, error }) => {
   switch (type) {
     case LOADING:
       return {
         ...state,
         loading: true,
+        error: null,
       };
     case GET_CHARACTERS:
       return {
@@ -36,6 +38,7 @@ export const charactersReducer = (state = initialState, { type, characters }) =>
         loading: false,
         characters: characters.data.results,
         totalResults: characters.data.total,
+        error: null,
       };
     case GET_CHARACTERS_ERROR:
       return {
