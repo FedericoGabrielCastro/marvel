@@ -1,5 +1,6 @@
 import { MvMain } from '@layout/MvMain/MvMain';
-import { HomeViewOptionSection } from './sections/HomeViewOptionSection/HomeViewOptionSection';
+import { HomeViewOptionSection } from '@views/HomeView/sections/HomeViewOptionSection/HomeViewOptionSection';
+import { HomeViewTaskSection } from '@views/HomeView/sections/HomeViewTaskSection/HomeViewTaskSection';
 
 /**
  * HomeView.
@@ -13,6 +14,7 @@ const HomeView = () => {
   return (
     <MvMain>
       <HomeViewOptionSection />
+      <HomeViewTaskSection />
     </MvMain>
   );
 };
